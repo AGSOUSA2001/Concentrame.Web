@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Noticias</title>
+</head>
+<body>
+    <div *ngIf="isLoading == true" class="spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+    <div id="container" *ngIf="isLoading == false">
+        <h1>Noticias</h1>
+        <hr/>
+        <div id="right">
+            <mat-card class="lastNews" fxLayout="column">
+                <mat-card-title-group>
+                    <mat-card-title>
+                        <h3>
+                            Últimas noticias:
+                        </h3>
+                    </mat-card-title>
+                </mat-card-title-group>
+                <mat-card-content>
+                    <div *ngFor="let notice of lastNotices">
+                        <p><span (click)="openNotice(notice.id)"><a>{{notice.title}}</a></span></p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="categorys" fxLayout="column">
+                <mat-card-title-group>
+                    <mat-card-title>
+                        <h3>
+                            Categorías:
+                        </h3>
+                    </mat-card-title>
+                </mat-card-title-group>
+                <mat-card-content>
+                    <p><span (click)="openCategory('food')"><a>Alimentación ({{countFood}})</a></span></p>
+                    <p><span (click)="openCategory('tecnology')"><a>Tecnología ({{countTecnology}})</a></span></p>
+                    <p><span><a><b>Todas las noticias ({{countAll}})</b></a></span></p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="notices" *ngFor="let notice of notices">
+            <mat-card [ngClass]="notice.category" fxLayout="column" (click)="openNotice(notice.id)">
+                <mat-card-title-group>
+                    <mat-card-title>
+                        <h2>
+                            {{notice.title}}
+                        </h2>
+                    </mat-card-title>
+                </mat-card-title-group>
+            </mat-card>
+        </div>
+    </div>
+</body>
+</html>

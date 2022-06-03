@@ -1,0 +1,53 @@
+#right{
+    float: right;
+    width: 30%;
+    margin: 50px 100px 0 0;
+    iframe {
+        width: 450px;
+        height: 450px;
+        border: 0;
+    }
+}
+#container{
+    h1{
+        font-size: 40px;
+        text-align: center;
+        margin: 5% 0;
+        font-family: cursive;
+    }
+    .disable{
+        width: 170px;
+        display: flex;
+        margin: auto;
+        background-color: grey;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 7%;
+        mat-icon{
+            padding: 5% 0 0 5%;
+        }
+        h5{
+            padding-top: 4%;
+            padding-left: 8%;
+        }
+    }
+    .send {
+        width: 170px;
+        display: flex;
+        margin: auto;
+        background-color: #05145a;
+        color: white;
+        margin-top: 5%;
+        margin-bottom: 7%;
+        mat-icon{
+            padding: 5% 0 0 5%;
+        }
+        h5{
+            padding-top: 4%;
+            padding-left: 8%;
+        }
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}

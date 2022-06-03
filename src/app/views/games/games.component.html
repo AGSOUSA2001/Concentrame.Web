@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Juegos</title>
+</head>
+<body>
+    <div id="container">
+        <mat-card class="games" fxLayout="column">
+            <mat-card-title-group>
+                <mat-card-title>
+                    <h3>
+                        Nuestros juegos:
+                    </h3>
+                </mat-card-title>
+            </mat-card-title-group>
+            <mat-card-content>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" (click)="openGame('puzle')">
+                        <img src="../../../assets/resources/puzle.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p><span>Puzle 8 piezas</span></p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" (click)="openGame('memory')">
+                        <img src="../../../assets/resources/memory.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p><span>Memoria de Cartas</span></p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" (click)="openGame('simon')">
+                        <img src="../../../assets/resources/simon.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p><span>Simon dice</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </mat-card-content>
+        </mat-card>
+        <h2>Juegos para entrenar y mejorar dificultades en el TDAH</h2>
+        <mat-stepper orientation="vertical" #stepper>
+            <mat-step>
+                <ng-template matStepLabel>
+                    <h3>¿Por qué es importante entrenar estos aspectos?</h3>
+                </ng-template>
+                <p><b>El control de la impulsividad:</b> primordial para cualquier niño con TDAH. Despertar en ellos la necesidad de pensar antes de actuar, de calibrar las situaciones ante las que se encuentran, de forma que sean capaces de prever las consecuencias que pueden tener sus actos.</p>
+                <p><b>Desarrollar el autocontrol:</b> aspecto muy relacionado con la impulsividad. Es necesario que sean capaces de controlar sus conductas actuando de una forma reflexiva, adecuando sus comportamientos a las diferentes situaciones sociales en las que se encuentren y gestionando la impulsividad.</p>    
+                <p><b>Concentración:</b> entendemos la concentración como la atención sostenida o estado de alerta continuo y durante un tiempo determinado, en la que el niño mantiene la atención sobre una tarea durante un período prolongado de tiempo.</p>
+                <p><b>Déficit de atención:</b> dificultad para centrar la atención en un estímulo cuando nos encontramos en presencia de más de uno, por lo que el niño no puede discernir el relevante del que no lo es.</p>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>
+                    <h3>Benefios de los juegos para niños con TDAH</h3>
+                </ng-template>
+                <ul>
+                    <li>Mejora la atención.</li>
+                    <li>Aumenta la capacidad de concentración.</li>
+                    <li>Disminuye la impulsividad.</li>
+                    <li>Potencia las funciones ejecutivas.</li>
+                    <li>Fomenta el razonamiento lógico-matemático.</li>
+                    <li>Ayuda en el desarrollo de las habilidades del lenguaje.</li>
+                    <li>Promueve las habilidades sociales: comunicación, respetar las normas del juego, conexión social, etc.</li>
+                    <li>Aumenta la tolerancia a la frustración: aceptar la derrota, respetar los turnos en el juego, etc</li>
+                </ul>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>
+                    <h3>Importante</h3>
+                </ng-template>
+                <p>Estos juegos para niños/as con TDAH <b>NUNCA pueden sustituir</b> a la <b>terapia</b> y <b>tratamiento necesarios</b>.</p>
+                <p>El primer paso para ayudar a un niño o niña con TDAH, o sospecha de TDAH, es acudir a la <b>consulta</b> de un/a <b>profesional</b> de la <b>psicología</b>.</p>
+            </mat-step>
+        </mat-stepper>  
+    </div>
+</body>
+</html>

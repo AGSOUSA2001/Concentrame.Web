@@ -1,0 +1,25 @@
+iframe{
+    width: 70%;
+    height: 900px;
+    display: flex;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+button{
+    width: 120px;
+    display: flex;
+    margin: auto;
+    background-color: #05145a;
+    color: white;
+    mat-icon{
+        padding: 5% 0 0 5%;
+    }
+    h5{
+        padding-top: 3%;
+        padding-left: 5%;
+    }
+}
+button:hover{
+    cursor: pointer;
+}

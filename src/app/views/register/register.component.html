@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resgistro</title>
+</head>
+<body>
+    <div id="right">
+        <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Zaragoza,%20Aragon,%20Spain+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <a href="https://www.gps.ie/car-satnav-gps/">GPS car tracker</a>
+        </iframe>
+    </div>
+    <div id="container" fxLayout="column" fxLayoutAlign="center">
+        <h1>Contacto</h1>
+        <form  fxLayout="row wrap" fxLayout.wrap fxLayoutAlign="start end" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field fxFlex="40.5" appearance="outline">
+                    <mat-label>Email:</mat-label>
+                    <input matInput formControlName="email" placeholder="pat@example.com" required name="email">
+                </mat-form-field>
+            </div>
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field fxFlex="20" appearance="outline">
+                    <mat-label>Nombre:</mat-label>
+                    <input matInput formControlName="name" required name="name">
+                </mat-form-field>
+                <mat-form-field fxFlex="20" appearance="outline">
+                    <mat-label>Teléfono:</mat-label>
+                    <input matInput formControlName="phone" required name="phone" [maxLength]="9">
+                </mat-form-field>
+            </div>
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field fxFlex="40.5" appearance="outline">
+                    <mat-label>Mensaje:</mat-label>
+                    <textarea matInput formControlName="message" required name="message"></textarea>
+                </mat-form-field>
+            </div>
+            <button type="submit" value="Submit" [ngClass]="form.invalid ? 'disable' : 'send'" [disabled]="form.invalid">
+                <mat-icon>send</mat-icon>
+                <h5>Envíar Datos</h5>
+            </button>
+        </form>
+    </div>
+</body>
+</html>

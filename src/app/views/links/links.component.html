@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Enlace de interés</title>
+</head>
+<body>
+    <div *ngIf="isLoading == true" class="spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+    <div id="container" *ngIf="isLoading == false">
+        <h1>Enlaces de Interés</h1>
+        <img src="../../../assets/resources/Internet-Mundial.jpg">
+        <ul>
+            <div *ngFor="let link of links">
+                <li>
+                    {{link.title}}<button mat-stroked-button color="primary" (click)="openLink(link.url)">🔗Link</button>
+                </li>
+            </div>
+        </ul>
+    </div>
+</body>
+</html>

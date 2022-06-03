@@ -1,0 +1,74 @@
+h1{
+    font-size: 40px;
+    text-align: left;
+    padding: 2% 0 0 3%;
+    margin-top: 0;
+}
+hr{
+    border-top: 2px solid black;
+}
+#right{
+    float: right;
+    width: 30%;
+}
+.lastNews{
+    margin: 6% 0 2% 4%;
+    width: 80%;
+    h3{
+        font-family: cursive;
+    }
+    span{
+        cursor:pointer;
+        font-family: fan;
+        font-size: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: #05145a;
+    }
+}
+.categorys{
+    margin: 10% 0 2% 4%;
+    width: 80%;
+    h3{
+        font-family: cursive;
+    }
+    span{
+        cursor:pointer;
+        font-family: fan;
+        font-size: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: #05145a;
+    }
+}
+.notices mat-card{
+    margin: 2% 0 5% 5%;
+    width: 903px;
+    min-height: 220px;
+    font-family: cursive;
+}
+.notices mat-card:hover{
+    cursor:pointer;
+    box-shadow: 5px 5px 10px #999;
+}
+.tecnology{
+    background-image: url("../../../../../assets/resources/computer-mouse-g0fff539c0_1280.png");
+    background-repeat: no-repeat;
+    background-size: 45% 100%;
+}
+mat-card h2{
+    margin-left: 450px;
+    margin-top: 5%;
+    width: 50%;
+}
+mat-card p{
+    font-size: 18px;
+}
+mat-card span{
+    color: #05145a
+}
+.example-card span:hover{
+    cursor:pointer;
+}

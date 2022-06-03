@@ -1,0 +1,47 @@
+#container{
+    margin: 3% 5%;
+    h1{
+        font-size: 40px;
+        font-family: cursive;
+    }
+    a{
+        font-size: 18px;
+        color: #05145a;
+        font-weight: bold;
+        font-family: cursive;
+    }
+    a:hover{
+        cursor: pointer;
+    }
+}
+.date{
+    font-size: 25px;
+    text-align: right;
+    margin-bottom: -2%;
+    font-family: cursive;
+}
+
+#text p{
+    font-size: 23px;
+    margin-top: 4%;
+    font-family: fan;
+}
+
+button{
+    width: 120px;
+    display: flex;
+    margin: auto;
+    background-color: #05145a;
+    color: white;
+    margin-top: 3%;
+    mat-icon{
+        padding: 5% 0 0 5%;
+    }
+    h5{
+        padding-top: 3%;
+        padding-left: 5%;
+    }
+}
+button:hover{
+    cursor: pointer;
+}

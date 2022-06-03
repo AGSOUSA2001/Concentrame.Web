@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notice {{notice.id}}</title>
+</head>
+<body>
+    <div id="container">
+        <h1>{{notice.title}} </h1><a (click)="openNotice(notice.url)">Link de la Noticia 🔗</a>
+        <p class="date">{{notice.date}}</p>
+        <div id="text">
+            <p>{{notice.paragraph1}}</p>
+            <p>{{notice.paragraph2}}</p>
+            <p>{{notice.paragraph3}}</p>
+        </div>
+        <button (click)="back()">
+            <mat-icon>keyboard_return</mat-icon>
+            <h5>Volver</h5>
+        </button>
+    </div>
+</body>
+</html>
