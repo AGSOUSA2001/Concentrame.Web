@@ -16,7 +16,7 @@ export class AppComponent {
   }
 
   map(): void{
-    window.open("https://www.google.es/maps/place/C.+Monasterio+de+la+Oliva,+8,+50002+Zaragoza/@41.6495744,-0.8618916,17.54z/data=!4m5!3m4!1s0xd59145af9d143dd:0xb5e9fdc6b37e9b4c!8m2!3d41.6497509!4d-0.8601936?hl=es");
+    window.open("https://www.google.com/maps/place/San+Valero+Foundation/@41.6698819,-0.8786073,18.79z/data=!4m5!3m4!1s0x0:0x66cc84d326d51c26!8m2!3d41.6697692!4d-0.878823");
   }
 
   openSocial(url:string): void{
