@@ -7,8 +7,12 @@ h1{
 #container{
     font-family: 'Times New Roman', Times, serif;
     margin: 2% 0 0 5%;
+    display: flex; 
+    justify-content: left; 
+    width: 100%;
+    flex-wrap: wrap;
     ul{
-        width: 40%;
+        width: 100%;
         margin-top: 5%;
     }
     li{
@@ -19,13 +23,75 @@ h1{
         width: 100px;
         height: 40px;
         font-size: 16px;
-        float: right;
         margin-top: -7px;
     }
 }
+#left{
+    display: block;
+    width: 40%;
+    margin-right: 20%;
+}
+#rigth{
+    display: block;
+    margin: auto;
+    width: 40%;
+}
 img{
-    float: right;
-    width: 30%;
-    margin-right: 5%;
-    margin-top: 3%;
+    width: 70%;
+    
+}
+@media (max-width: 575px) {
+    h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    #container{
+        margin: 2% 0 0 0;
+        li{
+            font-size: 13px;
+        }
+        span{
+            width: 100%;
+        }
+        button{
+            width: 30px;
+            height: 20px;
+            font-size: 11px;
+        }
+    }
+    #left{
+        width: 100%;
+        margin-right: 0;
+    }
+    #rigth{
+        width: 90%;
+        text-align: center;
+    }
+    img{
+        width: 85%;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) and (max-width: 767px) { 
+
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) and (max-width: 991px) {  
+
+}
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) and (max-width: 1379px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1380px) { 
+    
 }

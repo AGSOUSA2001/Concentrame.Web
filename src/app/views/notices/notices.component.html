@@ -8,8 +8,23 @@
         <mat-spinner></mat-spinner>
     </div>
     <div id="container" *ngIf="isLoading == false">
-        <h1>Noticias</h1>
-        <hr/>
+        <div id="top">
+            <h1>Noticias</h1>
+            <hr/>
+        </div>
+        <div id="left">  
+            <div class="notices" *ngFor="let notice of notices">
+                <mat-card [ngClass]="notice.category" fxLayout="column" (click)="openNotice(notice.id)">
+                    <mat-card-title-group>
+                        <mat-card-title>
+                            <h2>
+                                {{notice.title}}
+                            </h2>
+                        </mat-card-title>
+                    </mat-card-title-group>
+                </mat-card>
+            </div>
+        </div>
         <div id="right">
             <mat-card class="lastNews" fxLayout="column">
                 <mat-card-title-group>
@@ -38,17 +53,6 @@
                     <p><span (click)="openCategory('tecnology')"><a>Tecnología ({{countTecnology}})</a></span></p>
                     <p><span><a><b>Todas las noticias ({{countAll}})</b></a></span></p>
                 </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="notices" *ngFor="let notice of notices">
-            <mat-card [ngClass]="notice.category" fxLayout="column" (click)="openNotice(notice.id)">
-                <mat-card-title-group>
-                    <mat-card-title>
-                        <h2>
-                            {{notice.title}}
-                        </h2>
-                    </mat-card-title>
-                </mat-card-title-group>
             </mat-card>
         </div>
     </div>

@@ -3,13 +3,29 @@ h1{
     text-align: left;
     padding: 2% 0 0 3%;
     margin-top: 0;
+    font-family: cursive;
 }
 hr{
     border-top: 2px solid black;
 }
+#container{
+    padding-bottom: 2%;
+    display: flex; 
+    justify-content: left; 
+    width: 100%;
+    flex-wrap: wrap;
+}
+#top{
+    width: 100%;
+}
+#left{
+    width: 45%;
+    display: block;
+    margin-right: 25%;
+}
 #right{
-    float: right;
     width: 30%;
+    display: block;
 }
 .lastNews{
     margin: 6% 0 2% 4%;
@@ -45,8 +61,7 @@ hr{
 }
 .notices mat-card{
     margin: 2% 0 5% 5%;
-    width: 903px;
-    min-height: 220px;
+    width: 90%;
     font-family: cursive;
 }
 .notices mat-card:hover{
@@ -59,7 +74,7 @@ hr{
     background-size: 45% 100%;
 }
 mat-card h2{
-    margin-left: 450px;
+    margin-left: 50%;
     margin-top: 5%;
     width: 50%;
 }
@@ -71,4 +86,116 @@ mat-card span{
 }
 .example-card span:hover{
     cursor:pointer;
+}
+
+@media (max-width: 575px) { 
+    #left{
+        width: 100%;
+        margin: 0;
+    }
+    #right{
+        width: 100%;
+    }
+    .lastNews{
+        margin: auto;
+        margin-top: 10%;
+    }
+    .categorys{
+        margin: auto;
+        margin-top: 10%;
+    }
+    .notices mat-card{
+        width: 90%;
+        font-family: cursive;
+    }
+    mat-card h2{
+        font-size: 20px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    #left{
+        width: 100%;
+        margin: 0;
+    }
+    #right{
+        width: 100%;
+    }
+    .lastNews{
+        margin: auto;
+        margin-top: 10%;
+    }
+    .categorys{
+        margin: auto;
+        margin-top: 10%;
+    }
+    .notices mat-card{
+        width: 90%;
+        font-family: cursive;
+    }
+    mat-card h2{
+        font-size: 23px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) and (max-width: 991px) {  
+    #left{
+        width: 55%;
+        margin-right: 5%;
+    }
+    #right{
+        width: 40%;
+    }
+    .lastNews{
+        margin: auto;
+        margin-top: 10%;
+    }
+    .categorys{
+        margin: auto;
+        margin-top: 10%;
+    }
+    .notices mat-card{
+        width: 90%;
+        font-family: cursive;
+    }
+    mat-card h2{
+        font-size: 26px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) and (max-width: 1379px) { 
+    #left{
+        width: 55%;
+        margin-right: 5%;
+    }
+    #right{
+        width: 40%;
+    }
+    .lastNews{
+        margin: auto;
+        margin-top: 10%;
+    }
+    .categorys{
+        margin: auto;
+        margin-top: 10%;
+    }
+    .notices mat-card{
+        width: 90%;
+        font-family: cursive;
+    }
+    mat-card h2{
+        font-size: 26px;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1380px) { 
+    
 }

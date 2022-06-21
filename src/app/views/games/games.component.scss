@@ -1,5 +1,9 @@
 #container{
     margin: 2% 0 0 5%;
+    display: flex; 
+    justify-content: left; 
+    width: 95%;
+    flex-wrap: wrap;
     h2{
         font-size: 30px;
         font-family: cursive;
@@ -8,6 +12,7 @@
     h3{
         font-size: 25px;
         font-family: cursive;
+        width: 100%;
     }
     p{
         font-size: 20px;
@@ -19,10 +24,22 @@
         font-family: 'Times New Roman', Times, serif;
     }
 }
+::ng-deep .mat-step-label{
+    white-space: unset !important;
+}
+::ng-deep .mat-step-header{
+    height: auto !important;
+}
+#left{
+    width: 50%;
+    display: block;
+}
+#right{
+    display: block;
+    width: 40%;
+}
 mat-card{
-    margin: 2% 2% 0 4%;
-    width: 30%;
-    float: right;
+    margin: 0 5% 0 4%;
     img:hover{
         cursor:pointer;
     }
@@ -31,9 +48,115 @@ mat-card{
     }
 }
 mat-stepper{
-    width: 1000px;
     margin-bottom: 3%;
+    display: block;
+    width: 100%;
     span{
         font-size: 30px;
     }
+}
+
+@media (max-width: 575px) { 
+    #container{
+        h2{
+            font-size: 20px;
+        }
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 15px;
+        }
+        li{
+            font-size: 15px;
+            margin: 0.5% 0;
+        }
+    }
+    #izq{
+        width: 100%;
+    }
+    #der{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    #container{
+        h2{
+            font-size: 23px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 18px;
+        }
+        li{
+            font-size: 18px;
+            margin: 0.7% 0;
+        }
+    }
+    #izq{
+        width: 100%;
+    }
+    #der{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) and (max-width: 991px) {  
+    #container{
+        h2{
+            font-size: 27px;
+        }
+        h3{
+            font-size: 23px;
+        }
+        p{
+            font-size: 19px;
+        }
+        li{
+            font-size: 19px;
+            margin: 0.7% 0;
+        }
+    }
+    #izq{
+        width: 100%;
+    }
+    #der{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) and (max-width: 1379px) { 
+    #container{
+        h2{
+            font-size: 28.5px;
+        }
+        h3{
+            font-size: 24px;
+        }
+        p{
+            font-size: 19px;
+        }
+        li{
+            font-size: 19px;
+            margin: 0.7% 0;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1380px) { 
+    
 }

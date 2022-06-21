@@ -12,7 +12,7 @@ export class LinkService {
   endpoint = '';
 
   constructor(private http: HttpClient) {
-    this.endpoint = `${environment.apiURL}/Link`;
+    this.endpoint = `${environment.apiURL}/Links`;
   }
   
   getAllLinks(): Observable<LinkModel[]> {
