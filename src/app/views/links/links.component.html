@@ -10,13 +10,16 @@
     <div id="container" *ngIf="isLoading == false">
         <div id="left">
             <h1>Enlaces de Interés</h1>
-            <ul>
-                <div *ngFor="let link of links">
-                    <li>
-                        <span>{{link.title}}</span><button mat-stroked-button color="primary" (click)="openLink(link.url)">🔗Link</button>
-                    </li>
+            <div *ngFor="let link of links">
+                <div id="links">
+                    <diV id="name">
+                        <span>{{link.title}}</span>
+                    </diV>
+                    <div id="url">
+                        <button mat-stroked-button color="primary" (click)="openLink(link.url)">🔗Link</button>
+                    </div>
                 </div>
-            </ul>
+            </div>
         </div>
         <div id="rigth">
             <img src="../../../assets/resources/Internet-Mundial.jpg">
