@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURL: 'https://concentrameapi.azurewebsites.net'
+  apiURL: 'https://concentrameapi.azurewebsites.net/api'
 };
