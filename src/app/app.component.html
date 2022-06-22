@@ -1,12 +1,30 @@
 <div id="header">
-    <img src="../assets/resources/logo.png" id="logo" routerLink="/home">
-    <div id="links">
-        <span routerLink="/home" routerLinkActive="active"><b class="menu">Inicio</b></span>
-        <span routerLink="/games" routerLinkActive="active"><b class="menu">Juegos</b></span>
-        <span routerLink="/notices" routerLinkActive="active"><b class="menu">Noticias</b></span>
-        <span routerLink="/links" routerLinkActive="active"><b class="menu">Enlaces de interés</b></span>
-        <span routerLink="/register" routerLinkActive="active"><b class="menu">Contacto</b></span>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <img src="../assets/resources/logo.png" id="logo" routerLink="/home" class="navbar-brand">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+        <div id="links">
+            <div class="link">
+                <span routerLink="/home" routerLinkActive="active"><b class="menu">Inicio</b></span>
+            </div>
+            <div class="link">
+                <span routerLink="/games" routerLinkActive="active"><b class="menu">Juegos</b></span>
+            </div>
+            <div class="link">
+                <span routerLink="/notices" routerLinkActive="active"><b class="menu">Noticias</b></span>
+            </div>
+            <div class="link">
+                <span routerLink="/links" routerLinkActive="active"><b class="menu">Enlaces de interés</b></span>
+            </div>
+            <div class="link">
+                <span routerLink="/register" routerLinkActive="active"><b class="menu">Contacto</b></span>
+            </div>
+        </div>
+        </div>
+    </nav>
 </div>
 <main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
@@ -23,7 +41,7 @@
         </ul>
     </div>
     <div id="centerFooter" class="column">
-        <img src="../assets/resources/logo2.png">
+        <img src="../assets/resources/logo2.png" class="img-fluid">
     </div>
     <div id="rightFooter" class="column">
         <img src="../assets/resources/redes.png" class="redes">

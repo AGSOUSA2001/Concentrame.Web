@@ -5,27 +5,206 @@ h1{
     font-family: cursive;
 }
 #container{
-    font-family: fan;
+    font-family: 'Times New Roman', Times, serif;
     margin: 2% 0 0 5%;
-    ul{
-        width: 40%;
-        margin-top: 5%;
-    }
-    li{
-        font-size: 20px;
-        margin: 6% 0;
-    }
+    display: flex; 
+    justify-content: left; 
+    width: 95%;
+    flex-wrap: wrap;
+    font-size: 20px;
     button{
         width: 100px;
         height: 40px;
         font-size: 16px;
-        float: right;
         margin-top: -7px;
     }
 }
+#left{
+    display: block;
+    width: 40%;
+    margin-right: 20%;
+}
+#rigth{
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+#links{
+    display: flex; 
+    justify-content: left; 
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#name{
+    display: block;
+    width: 70%;
+}
+#url{
+    display: block;
+    margin-left: 8%;
+}
 img{
-    float: right;
-    width: 30%;
-    margin-right: 5%;
-    margin-top: 3%;
+    width: 70%;
+    
+}
+@media (max-width: 575px) {
+    h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    #container{
+        margin: 2% 0 0 0;
+        font-size: 17px;
+        span{
+            width: 100%;
+        }
+        button{
+            width: auto;
+            height: auto;
+            font-size: 15px;
+        }
+    }
+    #left{
+        width: 100%;
+        margin-right: 0;
+    }
+    #rigth{
+        width: 90%;
+        text-align: center;
+    }
+    img{
+        width: 85%;
+    }
+    #name{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    #url{
+        display: block;
+        margin: auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    #container{
+        margin: 2% 0 0 0;
+        font-size: 17px;
+        span{
+            width: 100%;
+        }
+        button{
+            font-size: 15px;
+        }
+    }
+    #left{
+        width: 100%;
+        margin-right: 0;
+    }
+    #rigth{
+        width: 90%;
+        text-align: center;
+    }
+    img{
+        width: 85%;
+    }
+    #name{
+        width: 70%;
+        margin-left: 5%;
+    }
+    #url{
+        margin: auto;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) and (max-width: 991px) {  
+    h1{
+        font-size: 28px;
+        text-align: center;
+    }
+    #container{
+        margin: 2% 0 0 0;
+        font-size: 19px;
+        span{
+            width: 100%;
+        }
+        button{
+            font-size: 16px;
+        }
+    }
+    #left{
+        width: 100%;
+        margin-right: 0;
+    }
+    #rigth{
+        width: 90%;
+        text-align: center;
+    }
+    img{
+        width: 85%;
+    }
+    #name{
+        width: 70%;
+        margin-left: 5%;
+    }
+    #url{
+        margin: auto;  
+    }
+}
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) and (max-width: 1379px) { 
+    h1{
+        font-size: 28px;
+        text-align: center;
+    }
+    #container{
+        margin: 2% 0 0 0;
+        font-size: 19px;
+        span{
+            width: 100%;
+        }
+        button{
+            font-size: 16px;
+        }
+    }
+    #left{
+        width: 100%;
+        margin-right: 0;
+        margin-left: 5%;
+    }
+    #rigth{
+        width: 90%;
+        text-align: center;
+    }
+    img{
+        width: 85%;
+    }
+    #name{
+        width: 70%;
+        margin-left: 5%;
+    }
+    #url{
+        margin: auto;  
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1380px) { 
+    
 }

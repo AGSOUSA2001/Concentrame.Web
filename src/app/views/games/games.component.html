@@ -5,52 +5,7 @@
 </head>
 <body>
     <div id="container">
-        <mat-card class="games" fxLayout="column">
-            <mat-card-title-group>
-                <mat-card-title>
-                    <h3>
-                        Nuestros juegos:
-                    </h3>
-                </mat-card-title>
-            </mat-card-title-group>
-            <mat-card-content>
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" (click)="openGame('puzle')">
-                        <img src="../../../assets/resources/puzle.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <p><span>Puzle 8 piezas</span></p>
-                        </div>
-                      </div>
-                      <div class="carousel-item" (click)="openGame('memory')">
-                        <img src="../../../assets/resources/memory.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <p><span>Memoria de Cartas</span></p>
-                        </div>
-                      </div>
-                      <div class="carousel-item" (click)="openGame('simon')">
-                        <img src="../../../assets/resources/simon.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <p><span>Simon dice</span></p>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-            </mat-card-content>
-        </mat-card>
+        <div id="izq">
         <h2>Juegos para entrenar y mejorar dificultades en el TDAH</h2>
         <mat-stepper orientation="vertical" #stepper>
             <mat-step>
@@ -84,7 +39,56 @@
                 <p>Estos juegos para niños/as con TDAH <b>NUNCA pueden sustituir</b> a la <b>terapia</b> y <b>tratamiento necesarios</b>.</p>
                 <p>El primer paso para ayudar a un niño o niña con TDAH, o sospecha de TDAH, es acudir a la <b>consulta</b> de un/a <b>profesional</b> de la <b>psicología</b>.</p>
             </mat-step>
-        </mat-stepper>  
+        </mat-stepper> 
+        </div>
+        <div id="der">
+            <mat-card class="games" fxLayout="column">
+                <mat-card-title-group>
+                    <mat-card-title>
+                        <h3>
+                            Nuestros juegos:
+                        </h3>
+                    </mat-card-title>
+                </mat-card-title-group>
+                <mat-card-content>
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" (click)="openGame('puzle')">
+                            <img src="../../../assets/resources/puzle.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p><span>Puzle 8 piezas</span></p>
+                            </div>
+                          </div>
+                          <div class="carousel-item" (click)="openGame('memory')">
+                            <img src="../../../assets/resources/memory.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p><span>Memoria de Cartas</span></p>
+                            </div>
+                          </div>
+                          <div class="carousel-item" (click)="openGame('simon')">
+                            <img src="../../../assets/resources/simon.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p><span>Simon dice</span></p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </mat-card-content>
+            </mat-card>
+            </div>
     </div>
 </body>
 </html>

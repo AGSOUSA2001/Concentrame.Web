@@ -12,7 +12,7 @@ export class NoticeService {
   endpoint = '';
 
   constructor(private http: HttpClient) {
-    this.endpoint = `${environment.apiURL}/Notice`;
+    this.endpoint = `${environment.apiURL}/Notices`;
   }
 
   getAllNotices(): Observable<NoticeModel[]> {

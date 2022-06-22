@@ -8,15 +8,22 @@
         <mat-spinner></mat-spinner>
     </div>
     <div id="container" *ngIf="isLoading == false">
-        <h1>Enlaces de Interés</h1>
-        <img src="../../../assets/resources/Internet-Mundial.jpg">
-        <ul>
+        <div id="left">
+            <h1>Enlaces de Interés</h1>
             <div *ngFor="let link of links">
-                <li>
-                    {{link.title}}<button mat-stroked-button color="primary" (click)="openLink(link.url)">🔗Link</button>
-                </li>
+                <div id="links">
+                    <diV id="name">
+                        <span>{{link.title}}</span>
+                    </diV>
+                    <div id="url">
+                        <button mat-stroked-button color="primary" (click)="openLink(link.url)">🔗Link</button>
+                    </div>
+                </div>
             </div>
-        </ul>
+        </div>
+        <div id="rigth">
+            <img src="../../../assets/resources/Internet-Mundial.jpg">
+        </div>
     </div>
 </body>
 </html>
