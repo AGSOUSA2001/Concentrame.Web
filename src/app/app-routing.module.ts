@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./views/register/register.module').then(m => m.RegisterModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./views/admin/admin.module').then(m => m.AdminModule)
+  },
   { 
     path: '**', 
     redirectTo: '/home'

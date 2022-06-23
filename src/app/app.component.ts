@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'concentrame';
 
-  constructor(public router: Router){}
+  constructor(public router: Router){
+  }
 
   email(): void{
     window.open("https://mail.google.com/mail/u/0/?view=cm&fs=1&to=andresgilsousa@gmail.com&su=Concéntrame&body=&tf=1",'_blanck');
@@ -21,5 +22,12 @@ export class AppComponent {
 
   openSocial(url:string): void{
     window.open(url, '_blanck');
+  }
+  isAdminRoute(): boolean{
+    if(this.router.url.startsWith('/admin')){
+      return false;
+    }else{
+      return true;
+    }
   }
 }

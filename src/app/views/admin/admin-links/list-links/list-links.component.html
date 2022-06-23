@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Listado de Enlaces de Interés</title>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Listado de Enlaces de Interés
+        </h1>
+    </div>
+    <div id="container">
+        <div class="create">
+            <button [routerLink]="'/admin/links/create'" >
+                <div class="new">
+                    <mat-icon>add_circle</mat-icon>
+                    <p>Nuevo Enlace</p>
+                </div>
+            </button>
+        </div>
+        <div *ngIf="isLoading == true" class="spinner">
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="example-container mat-elevation-z8" *ngIf="isLoading == false">
+            <table mat-table [dataSource]="dataSource" fxFill>
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> Id </th>
+                    <td mat-cell *matCellDef="let row"> {{row.id}} <td>
+                </ng-container>
+
+                <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef> Título </th>
+                    <td mat-cell *matCellDef="let row"> {{row.title}} <td>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+                    <td mat-cell *matCellDef="let row"> <span [routerLink]="'/admin/links/edit/' + row.id">⚙️</span> <span (click)="deleteNotice(row.id,row.title)">🗑️</span> <td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            
+            </table>
+        </div>
+        <div class="back">
+            <button (click)="back()">
+                Volver
+            </button>
+        </div>
+    </div>
+</body>
+</html>
