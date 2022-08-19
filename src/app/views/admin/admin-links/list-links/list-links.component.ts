@@ -43,7 +43,7 @@ export class ListLinksComponent implements OnInit, AfterViewInit {
       this.isLoading=false;
     });
   }
-  deleteNotice(id: number, title: string):void{
+  deleteLink(id: number, title: string):void{
     const dialogRef = this.dialog.open(DeleteLinksComponent, {
       data: {
         title: title,
@@ -54,7 +54,7 @@ export class ListLinksComponent implements OnInit, AfterViewInit {
       if(result){
         this.linkService.deleteLink(id).subscribe(() => {
           this.refreshData$.next();
-          this.toastr.success('La noticia ha sido eliminada correctamente');
+          this.toastr.success('El link ha sido eliminado correctamente');
         });
       }
     });

@@ -11,8 +11,8 @@
     </div>
     <div id="container">
         <form fxLayout="row wrap" fxLayout.wrap fxLayoutAlign="start end" [formGroup]="form">
-            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="200px">
-                <mat-form-field fxFlex="30" appearance="outline">
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="30px" class="camps">
+                <mat-form-field appearance="outline">
                     <mat-label>Email:</mat-label>
                     <input matInput type="email" formControlName="email" placeholder="pat@example.com" required>
                     <div *ngIf="form.get('email')?.touched && form.controls['email'].errors">
@@ -21,7 +21,7 @@
                         </mat-error>
                     </div>
                 </mat-form-field>
-                <mat-form-field fxFlex="30" appearance="outline">
+                <mat-form-field appearance="outline">
                     <mat-label>Contraseña:</mat-label>
                     <input matInput type="password" formControlName="password" (keyup.enter)="loginUser()">
                     <div *ngIf="form.get('password')?.touched && form.controls['password'].errors">

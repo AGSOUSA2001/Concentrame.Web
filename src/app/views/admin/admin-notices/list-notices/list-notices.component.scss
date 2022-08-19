@@ -71,3 +71,57 @@ tr:not(.example-expanded-row):active {
 .back button:hover{
     cursor:pointer;
 }
+
+@media (max-width: 575px) { 
+    .header h1{
+        font-size: 30px;
+    }
+    #container{
+        width: 95%;
+    }
+    .create{
+        margin-bottom: 10px;
+        button{
+            font-size: 15px;
+            min-width: 160px;
+            max-width: 100%;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    .header h1{
+        font-size: 40px;
+    }
+    #container{
+        width: 75%;
+    }
+    .create{
+        margin-bottom: 10px;
+        button{
+            font-size: 15px;
+            min-width: 160px;
+            max-width: 100%;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) and (max-width: 991px) {  
+    
+}
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) and (max-width: 1379px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1380px) { 
+    
+}

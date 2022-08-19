@@ -1,1 +1,39 @@
-<p>edit-links works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Actualizar Enlace de Interés</title>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Actualizar Enlace de Interés
+        </h1>
+    </div>
+    <div id="container" fxLayout="column" fxLayoutAlign="center">
+        <div *ngIf="isLoading == true" class="spinner">
+            <mat-spinner></mat-spinner>
+        </div>
+        <form fxLayout="row wrap" fxLayout.wrap fxLayoutAlign="start end" [formGroup]="form" *ngIf="isLoading == false">
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Título:</mat-label>
+                    <input matInput formControlName="title" required>
+                </mat-form-field>
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Url:</mat-label>
+                    <input matInput formControlName="url" required>
+                </mat-form-field>
+            </div>
+        </form>
+        
+        <div class="buttons">
+            <button [ngClass]="form.invalid ? 'disable' : 'update'" (click)="updateLink()" [disabled]="form.invalid">
+                Actualizar Link
+            </button>
+            <button class="cancel" [routerLink]="'/admin/links'">
+                Cancelar
+            </button>
+        </div>
+    </div>
+</body>
+</html>

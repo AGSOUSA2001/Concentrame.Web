@@ -41,11 +41,11 @@ export class EditNoticesComponent implements OnInit {
 
         return EMPTY;
       })
-    ).subscribe((user) => {
-      if (user) {
-        this.form.patchValue(user);
+    ).subscribe((notice) => {
+      if (notice) {
+        this.form.patchValue(notice);
         this.isLoading=false;
-        this.idNotice = user.id;
+        this.idNotice = notice.id;
       }
     })
   }

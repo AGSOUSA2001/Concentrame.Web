@@ -41,7 +41,7 @@ export class CreateNoticesComponent implements OnInit {
     }
     this.noticeService.createNotice(notice).subscribe(() => {
       void this.router.navigateByUrl("/admin/notices");
-      this.toastr.success('El usuario ha sido creado correctamente');
+      this.toastr.success('La noticia ha sido creada correctamente');
     })
   }
 
