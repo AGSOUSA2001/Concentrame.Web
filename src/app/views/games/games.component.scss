@@ -30,11 +30,12 @@
 ::ng-deep .mat-step-header{
     height: auto !important;
 }
-#left{
+#izq{
     width: 50%;
     display: block;
+    margin-right: 10%;
 }
-#right{
+#der{
     display: block;
     width: 40%;
 }

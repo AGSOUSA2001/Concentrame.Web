@@ -1,0 +1,123 @@
+.header h1{
+    text-align: center;
+    font-size: 50px;
+    color: #05145a;
+    font-family: 'Medula One', sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+}
+#container{
+    text-align: center;
+    color: #003249;
+    margin-top: 100px;
+}
+.example-card{
+    min-width: 270px;
+    min-height: 200px;
+    align-items: center;
+}
+.example-card:hover{
+    cursor:pointer;
+    box-shadow: 5px 5px 10px #999;
+}
+#news{
+    background-image: url("../../../../assets/resources/fondo-textura-papel-amarillento-manuscrito-desgastado-como-fondo-pantalla_84485-1750.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#links{
+    background-image: url("../../../../assets/resources/fondoLinks.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.options{
+    display: inline-block;
+    margin: 3% 5% 0 5%;
+    text-align: center;
+}
+.options p{
+    font-size: 30px;
+    color: #05145a;
+    margin-top: 25px;
+}
+.options button{
+    margin-top: 40px;
+    font-size: 40px;
+    background: none;
+    border: 1px;
+    border-radius: 25px;
+    padding-bottom: 5px;
+}
+.options button:hover{
+    cursor:pointer;
+}
+.logout button{
+    margin-top: 12%;
+    width: 200px;
+    height: 50px;
+    background-color: #ca2525;
+    color: #003249;
+    font-weight: bold;
+    font-size: 18px;
+}
+.logout button:hover{
+    cursor:pointer;
+}
+
+@media (max-width: 575px) { 
+    .header h1{
+        font-size: 35px;
+        margin-top: 10%;
+    }
+    .options{
+        margin-bottom: 10%;
+    }
+    .options p{
+        font-size: 30px;
+        color: #05145a;
+        margin-top: 15px;
+    }
+    .options button{
+        margin-top: 5px;
+        font-size: 30px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    .header h1{
+        font-size: 40px;
+        margin-top: 5%;
+    }
+    .options{
+        margin-bottom: 5%;
+    }
+    .options p{
+        font-size: 30px;
+        color: #05145a;
+        margin-top: 15px;
+    }
+    .options button{
+        margin-top: 5px;
+        font-size: 30px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) and (max-width: 991px) {  
+    
+}
+
+// Large devices (desktops, 992px and up)
+
+@media (min-width: 992px) and (max-width: 1379px) { 
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+
+@media (min-width: 1380px) { 
+    
+}

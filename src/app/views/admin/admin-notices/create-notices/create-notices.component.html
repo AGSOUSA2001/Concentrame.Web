@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crear Noticia</title>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Crear Noticia
+        </h1>
+    </div>
+    <div id="container" fxLayout="column" fxLayoutAlign="center">
+        <form fxLayout="row wrap" fxLayout.wrap fxLayoutAlign="start end" [formGroup]="form">
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Título:</mat-label>
+                    <input matInput formControlName="title" required>
+                </mat-form-field>
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Categoría:</mat-label>
+                    <input matInput formControlName="category" required>
+                </mat-form-field>
+            </div>
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Url:</mat-label>
+                    <input matInput formControlName="url" required>
+                </mat-form-field>
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Fecha:</mat-label>
+                    <input matInput formControlName="date" required>
+                </mat-form-field>
+            </div>
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Parrafo 1:</mat-label>
+                    <textarea matInput formControlName="paragraph1" required name="message"></textarea>
+                </mat-form-field>
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Parrafo 2:</mat-label>
+                    <textarea matInput formControlName="paragraph2" required name="message"></textarea>
+                </mat-form-field>
+            </div>
+            <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">
+                <mat-form-field fxFlex="35" appearance="outline">
+                    <mat-label>Parrafo 3:</mat-label>
+                    <textarea matInput formControlName="paragraph3" required name="message"></textarea>
+                </mat-form-field>
+            </div>
+        </form>
+        
+        <div class="buttons">
+            <button [ngClass]="form.invalid ? 'disable' : 'create'" (click)="createNotice()" [disabled]="form.invalid">
+                Crear Noticia
+            </button>
+            <button class="cancel" [routerLink]="'/admin/notices'">
+                Cancelar
+            </button>
+        </div>
+    </div>
+</body>
+</html>

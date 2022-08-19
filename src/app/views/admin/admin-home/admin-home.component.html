@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            Bienvenido Andrés
+        </h1>
+    </div>
+    <div id="container">
+        <div class="options">
+            <mat-card class="example-card" fxLayout="column" id="news" [routerLink]="'/admin/notices'">
+                <mat-card-title-group>
+                    <mat-card-title>
+                        <p>
+                            Noticias
+                        </p>
+                    </mat-card-title>
+                </mat-card-title-group>
+                <mat-card-content>
+                    <button>
+                        📰📰📰
+                    </button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="options">
+            <mat-card class="example-card" fxLayout="column" id="links" [routerLink]="'/admin/links'">
+                <mat-card-title-group>
+                    <mat-card-title>
+                        <p>
+                            Enlaces de Interés
+                        </p>
+                    </mat-card-title>
+                </mat-card-title-group>
+                <mat-card-content>
+                    <button>
+                        🔗🔗🔗
+                    </button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="logout">
+            <button (click)="logout()">
+                Cerrar Sesión
+            </button>
+        </div>
+    </div>
+</body>
+</html>

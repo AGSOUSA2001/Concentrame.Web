@@ -1,4 +1,4 @@
-<div id="header">
+<div id="header" *ngIf="isAdminRoute()">
     <nav class="navbar navbar-expand-lg bg-light">
         <img src="../assets/resources/logo.png" id="logo" routerLink="/home" class="navbar-brand">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <router-outlet></router-outlet>
 </main>
-<div id="footer">
+<div id="footer" *ngIf="isAdminRoute()">
     <div id="leftFooter" class="column">
         <img src="../assets/resources/Title.png" id="title">
         <ul>
