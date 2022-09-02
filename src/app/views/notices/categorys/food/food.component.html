@@ -50,7 +50,10 @@
                 </mat-card-title-group>
                 <mat-card-content>
                     <p><span><a><b>Alimentación ({{countFood}})</b></a></span></p>
+                    <p><span (click)="openCategory('sports')"><a>Deportes ({{countSports}})</a></span></p>
+                    <p><span (click)="openCategory('health')"><a>Salud y Bienestar ({{countHealth}})</a></span></p>
                     <p><span (click)="openCategory('tecnology')"><a>Tecnología ({{countTecnology}})</a></span></p>
+                    <p><span (click)="openCategory('another')"><a>Otros ({{countAnother}})</a></span></p>
                     <p><span (click)="openCategory('all')"><a>Todas las noticias ({{countAll}})</a></span></p>
                 </mat-card-content>
             </mat-card>

@@ -9,7 +9,7 @@
     </div>
     <div id="container" *ngIf="isLoading == false">
         <div id="top">
-            <h1>Noticias de Tecnología</h1>
+            <h1>Noticias de Otros</h1>
             <hr/>
         </div>
         <div id="left">
@@ -30,7 +30,7 @@
                 <mat-card-title-group>
                     <mat-card-title>
                         <h3>
-                            Últimas noticias de Tecnología:
+                            Últimas noticias de Otros:
                         </h3>
                     </mat-card-title>
                 </mat-card-title-group>
@@ -52,8 +52,8 @@
                     <p><span (click)="openCategory('food')"><a>Alimentación ({{countFood}})</a></span></p>
                     <p><span (click)="openCategory('sports')"><a>Deportes ({{countSports}})</a></span></p>
                     <p><span (click)="openCategory('health')"><a>Salud y Bienestar ({{countHealth}})</a></span></p>
-                    <p><span><a><b>Tecnología ({{countTecnology}})</b></a></span></p>
-                    <p><span (click)="openCategory('another')"><a>Otros ({{countAnother}})</a></span></p>
+                    <p><span (click)="openCategory('tecnology')"><a>Tecnología ({{countTecnology}})</a></span></p>
+                    <p><span><a><b>Otros ({{countAnother}})</b></a></span></p>
                     <p><span (click)="openCategory('all')"><a>Todas las noticias ({{countAll}})</a></span></p>
                 </mat-card-content>
             </mat-card>

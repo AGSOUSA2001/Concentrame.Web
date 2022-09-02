@@ -23,9 +23,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { DeleteNoticesComponent } from './admin-notices/list-notices/delete-notices/delete-notices.component';
 import { DeleteLinksComponent } from './admin-links/list-links/delete-links/delete-links.component';
-
 const routes: Routes = [
   { path: '', component: AdminComponent, canActivate: [LoggedGuard] },
   { path: 'home', component: AdminHomeComponent, canActivate: [AuthGuard]},
@@ -65,10 +67,16 @@ const routes: Routes = [
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
+  ],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
   ]
 })
 export class AdminModule { }
