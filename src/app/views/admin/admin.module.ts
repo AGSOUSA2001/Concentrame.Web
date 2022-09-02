@@ -23,6 +23,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 import { DeleteNoticesComponent } from './admin-notices/list-notices/delete-notices/delete-notices.component';
 import { DeleteLinksComponent } from './admin-links/list-links/delete-links/delete-links.component';
 
@@ -65,7 +66,8 @@ const routes: Routes = [
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

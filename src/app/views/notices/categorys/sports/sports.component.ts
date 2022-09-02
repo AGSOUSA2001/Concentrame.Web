@@ -5,12 +5,11 @@ import { NoticeModel } from 'src/app/models/notices';
 import { NoticeService } from 'src/app/services/notice.service';
 
 @Component({
-  selector: 'app-notices',
-  templateUrl: './notices.component.html',
-  styleUrls: ['./notices.component.scss']
+  selector: 'app-sports',
+  templateUrl: './sports.component.html',
+  styleUrls: ['./sports.component.scss']
 })
-export class NoticesComponent implements OnInit {
-
+export class SportsComponent implements OnInit {
   notices: NoticeModel[] = [];
   lastNotices: NoticeModel[] = [];
   countAll = 0;
@@ -21,19 +20,14 @@ export class NoticesComponent implements OnInit {
   countAnother = 0;
 
   isLoading = true;
-  
+
   constructor(private router: Router, private noticeService: NoticeService) { }
 
   ngOnInit(): void {
     this.noticeService.getAllNotices().pipe(
       switchMap((result: NoticeModel[]) =>{
         this.isLoading=true;
-        this.notices = result;
         this.countAll = result.length;
-        return this.noticeService.getLastNotices();
-      }),
-      switchMap((result: NoticeModel[]) =>{
-        this.lastNotices = result;
         return this.noticeService.getNoticesByCategory("food");
       }),
       switchMap((result: NoticeModel[]) =>{
@@ -42,9 +36,14 @@ export class NoticesComponent implements OnInit {
       }),
       switchMap((result: NoticeModel[]) =>{
         this.countTecnology = result.length;
+        return this.noticeService.getLastNoticesByCategory("sports");
+      })
+      ,switchMap((result: NoticeModel[]) =>{
+        this.lastNotices = result;
         return this.noticeService.getNoticesByCategory("sports");
       }),
       switchMap((result: NoticeModel[]) =>{
+        this.notices = result;
         this.countSports = result.length;
         return this.noticeService.getNoticesByCategory("health");
       }),
@@ -57,7 +56,7 @@ export class NoticesComponent implements OnInit {
       this.countAnother = result.length;
     });
   }
-
+  
   // openNotice(notice: string): void {
   //   window.open(notice, '_blanck');
   // }
@@ -67,7 +66,11 @@ export class NoticesComponent implements OnInit {
   }
 
   openCategory(category: string): void {
-    this.router.navigate(['/notices/'+category]);
+    if (category == "all"){
+      this.router.navigate(['notices']);
+    }else{
+      this.router.navigate(['/notices/'+category]);
+    }
   }
-
 }
+

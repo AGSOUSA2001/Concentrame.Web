@@ -16,6 +16,9 @@ export class TecnologyComponent implements OnInit {
   countAll = 0;
   countFood = 0;
   countTecnology = 0;
+  countSports = 0;
+  countHealth = 0;
+  countAnother = 0;
 
   isLoading = true;
 
@@ -35,11 +38,23 @@ export class TecnologyComponent implements OnInit {
       switchMap((result: NoticeModel[]) =>{
         this.lastNotices = result;
         return this.noticeService.getNoticesByCategory("tecnology");
+      }),
+      switchMap((result: NoticeModel[]) =>{
+        this.notices = result;
+        this.countTecnology = result.length;
+        return this.noticeService.getNoticesByCategory("sports");
+      }),
+      switchMap((result: NoticeModel[]) =>{
+        this.countSports = result.length;
+        return this.noticeService.getNoticesByCategory("health");
+      }),
+      switchMap((result: NoticeModel[]) =>{
+        this.countHealth = result.length;
+        return this.noticeService.getNoticesByCategory("another");
       })
     ).subscribe((result: NoticeModel[]) =>{
       this.isLoading=false;
-      this.notices = result;
-      this.countTecnology = result.length;
+      this.countAnother = result.length;
     });
   }
 

@@ -18,7 +18,13 @@
                 </mat-form-field>
                 <mat-form-field fxFlex="35" appearance="outline">
                     <mat-label>Categoría:</mat-label>
-                    <input matInput formControlName="category" required>
+                    <mat-select formControlName="category" required>
+                        <mat-option value="food">Alimentación</mat-option>
+                        <mat-option value="sports">Deportes</mat-option>
+                        <mat-option value="health">Salud y Bienestar</mat-option>
+                        <mat-option value="tecnology">Tecnología</mat-option>
+                        <mat-option value="another">Otros</mat-option>
+                    </mat-select>
                 </mat-form-field>
             </div>
             <div fxFlex="100" fxLayoutAlign="center" fxLayoutGap="10px">

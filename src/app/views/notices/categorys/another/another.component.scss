@@ -28,7 +28,7 @@ hr{
     display: block;
 }
 .lastNews{
-    margin: 15% 0 2% 4%;
+    margin: 6% 0 2% 4%;
     width: 80%;
     h3{
         font-family: cursive;
@@ -44,7 +44,7 @@ hr{
     }
 }
 .categorys{
-    margin: 20% 0 2% 4%;
+    margin: 10% 0 2% 4%;
     width: 80%;
     h3{
         font-family: cursive;
@@ -60,7 +60,7 @@ hr{
     }
 }
 .notices mat-card{
-    margin: 2% 0 0 5%;
+    margin: 2% 0 5% 5%;
     width: 90%;
     font-family: cursive;
 }
@@ -68,30 +68,10 @@ hr{
     cursor:pointer;
     box-shadow: 5px 5px 10px #999;
 }
-.food{
-    background-image: url("../../../assets/resources/65619355-preparando-el-almuerzo-para-el-niño-con-verduras-y-frutas-a-la-escuela-vista-desde-arriba-sobre-fond.jpg");
+.another{
+    background-image: url("../../../../../assets/resources/otros.png");
     background-repeat: no-repeat;
     background-size: 100% 130%;
-}
-.tecnology{
-    background-image: url("../../../assets/resources/computer-mouse-g0fff539c0_1280.png");
-    background-repeat: no-repeat;
-    background-size: 45% 100%;
-}
-.sports{
-    background-image: url("../../../assets/resources/sports.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 120%;
-}
-.health{
-    background-image: url("../../../assets/resources/salud.png");
-    background-repeat: no-repeat;
-    background-size: 105% 100%;
-}
-.another{
-    background-image: url("../../../assets/resources/otros.png");
-    background-repeat: no-repeat;
-    background-size: 105% 100%;
 }
 mat-card h2{
     margin-left: 50%;
@@ -107,6 +87,7 @@ mat-card span{
 .example-card span:hover{
     cursor:pointer;
 }
+
 @media (max-width: 575px) { 
     #left{
         width: 100%;

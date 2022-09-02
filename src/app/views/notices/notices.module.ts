@@ -9,12 +9,18 @@ import { TecnologyComponent } from './categorys/tecnology/tecnology.component';
 import { ReadComponent } from './read/read.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SportsComponent } from './categorys/sports/sports.component';
+import { HealthComponent } from './categorys/health/health.component';
+import { AnotherComponent } from './categorys/another/another.component';
 
 
 const routes: Routes = [
   { path: '', component: NoticesComponent },
   { path: 'food', component: FoodComponent },
   { path: 'tecnology', component: TecnologyComponent },
+  { path: 'sports', component: SportsComponent },
+  { path: 'health', component: HealthComponent },
+  { path: 'another', component: AnotherComponent},
   { path: 'notice/:id', component: ReadComponent },
 ];
 
@@ -23,7 +29,10 @@ const routes: Routes = [
     NoticesComponent,
     FoodComponent,
     TecnologyComponent,
-    ReadComponent
+    ReadComponent,
+    SportsComponent,
+    HealthComponent,
+    AnotherComponent
   ],
   imports: [
     CommonModule,
